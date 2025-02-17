@@ -1,0 +1,19 @@
+$primary-color: #190;
+$hover-color: #999;
+$font-stack: 'Arial', sans-serif;
+
+body {
+    font-family: $font-stack;
+}
+
+.custom-button{
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
