@@ -1,5 +1,5 @@
 ### 1. Клонирование репозитория
 ```bash
-git clone https://github.com/vot-blin/Practical134.git
+git clone https://github.com/vot-blin/Practical34.git
 cd todowithpush
 ```
