@@ -1,0 +1,28 @@
+version: '4.40'
+
+services:
+  server:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./products.json:/usr/src/app/products.json
+    command: node server.js
+    depends_on:
+      - websocket
+
+  admin:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./products.json:/usr/src/app/products.json
+    command: node admin.js
+    depends_on:
+      - server
+
+  websocket:
+    build: .
+    ports:
+      - "8081:8081"
+    command: node websocket.js
